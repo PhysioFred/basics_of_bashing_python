@@ -1,0 +1,68 @@
+#!/bin/bash
+
+
+#Numeric Comparisons Operators
+#-gt: greater than
+#-lt: less than
+#-eq: equal to
+#-ne: not equal to
+#-ge: greater than or equal to
+#-le: less than or equal to
+
+function number_comparison {
+
+number1=200
+number2=400000
+
+if [ $number1 -ge $number2 ]; then
+    echo "$number1 is greater or equal to $number2"
+else
+    echo "$number1 is less than to $number2"
+fi
+}
+
+number_comparison
+
+
+#String Comparisons
+# - =: equal to
+# - !=: not equal to
+# - <: less than in ASCII alphabetical order (needs to be escaped as \<)
+# - >: greater than in ASCII alphabetical order (needs to be escaped as \>)
+
+function string_comparison {
+    string1="Agent Smith"
+    string2="Mr Anderson"
+
+    if [ "$string1" != "$string2" ]; then
+        echo "$string1 is not equal to $string2"
+    else
+        echo "$string1 is equal to $string2"
+    fi
+}
+
+string_comparison
+
+
+#File Comparisons
+# -e: file exists
+# -f: file is a regular file
+# -d: file is a directory
+# -r: file is readable
+# -w: file is writable
+# -x: file is executable
+
+
+
+function file_comparison {
+    file=~/maidens.txt
+    file2=~example/file/path/foul_tarnish
+
+    if [ -e "$file1" ]; then
+        echo "has maidens"
+    else
+        echo "It seems you are maidenless"
+    fi
+}
+
+file_comparison

@@ -52,8 +52,6 @@ string_comparison
 # -w: file is writable
 # -x: file is executable
 
-
-
 function file_comparison {
     file=~/maidens.txt
     file2=~example/file/path/foul_tarnish

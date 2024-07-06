@@ -48,14 +48,25 @@ string_comparison()
 #os.access(path, os.R_OK) : Checks if the file is readable
 #os.access(path, os.W_OK) : Checks if the file is writable
 #os.access(path, os.X_OK) : Checks if the file is executable
+#use  command `realpath <file/folder>` in linux to find the absolute file path
 import os
 
 file1="/home/fredunix/Fred/cloud_eng/python_bash/python/frodo.txt"
 file2="~/Fred/cloud_eng/python_bash/python/fake_file"
-directory1="~/Fred/cloud_eng/python_bash/python"
+directory1="/home/fredunix/Fred/cloud_eng/python_bash/python"
 directory2="~/Fred/cloud_eng/python_bash/fake_path"
 
 if os.path.exists(file1):
     print("got cha ass")
 else:
     print("file not found")
+
+if os.path.isfile(file1):
+    print("it's a file")
+else:
+    print("it's not a file")
+
+if os.path.isdir(directory1):
+    print("it's a directory")
+else:
+    print("it's not a directory")

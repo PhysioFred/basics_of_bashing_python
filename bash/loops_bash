@@ -1,0 +1,80 @@
+#!/bin/bash
+# Integer Comparison Operators
+
+#     Equal to:
+#     [ $a -eq $b ] - True if $a is equal to $b
+
+#     Not equal to:
+#     [ $a -ne $b ] - True if $a is not equal to $b
+
+#     Less than:
+#     [ $a -lt $b ] - True if $a is less than $b
+
+#     Less than or equal to:
+#     [ $a -le $b ] - True if $a is less than or equal to $b
+
+#     Greater than:
+#     [ $a -gt $b ] - True if $a is greater than $b
+
+#     Greater than or equal to:
+#     [ $a -ge $b ] - True if $a is greater than or equal to $b
+
+# String Comparison Operators
+
+#     Equal to:
+#     [ "$a" = "$b" ] - True if $a is equal to $b
+
+#     Not equal to:
+#     [ "$a" != "$b" ] - True if $a is not equal to $b
+
+#     Less than (in ASCII alphabetical order, needs to be escaped):
+#     [ "$a" \< "$b" ] - True if $a is less than $b
+
+#     Greater than (in ASCII alphabetical order, needs to be escaped):
+#     [ "$a" \> "$b" ] - True if $a is greater than $b
+
+#     String is null (has zero length):
+#     [ -z "$a" ] - True if the length of $a is zero
+
+#     String is not null (has non-zero length):
+#     [ -n "$a" ] - True if the length of $a is non-zero
+
+#brace exapansion
+#number sequence 
+#character sequence
+#list of strings
+
+#number sequence
+
+for i in {1..20}
+do
+    echo "Number: $i"
+done
+
+#character sequence
+
+for char in {a..g}
+do
+    echo "Number: $char"
+done
+
+#list of strings - brace expansion
+
+echo {apple,cherry,banana}
+
+fruit_list={orange,kiwi,plums}
+
+for fruit in $fruit_list
+do
+    echo $fruit
+done
+
+#list of strings
+#double quotes to prevent word splitting
+
+fruits_in_list=("wild plum" " sweet kiwi" " sour mango")
+
+for food in "${fruits_in_list[@]}"
+do
+    echo $food
+done
